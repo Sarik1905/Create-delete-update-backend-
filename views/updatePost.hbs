@@ -1,0 +1,46 @@
+      <h2>Update</h2>
+
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-6 border p-3">
+      <img src="{{post.img}}" alt="rasm" class="img-fluid"/>
+      <h2> {{post.title}} </h2>
+      <p> {{post.descr}} </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="container my-5">
+  <div class="col-6 m-auto">
+    <form action="/updatePost/post/{{post._id}}" method="post">
+      <div class="mb-3">
+        <label for="">Image</label>
+        <input
+          class="form-control"
+          type="text"
+          name="img"
+          value="{{post.img}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          name="title"
+          value="{{post.title}}"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="">Describtion</label>
+        <textarea class="form-control" name="descr">{{post.descr}}</textarea>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+
+</div>

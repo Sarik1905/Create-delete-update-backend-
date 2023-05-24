@@ -1,0 +1,16 @@
+<div class="container my-5">
+  <div class="row justify-content-center">
+    {{#each post}}
+      {{! post massivning har bir elementiga birma-bir murojaat qiladi }}
+      <div class="col-7 border p-4">
+        <img src="{{img}}" alt="rasm" class="img-fluid" />
+        <a href="/post/{{_id}}"><h2> {{title}} </h2></a>
+        <p> {{descr}} </p>
+        <form action="/delete/post/{{_id}}" method="post">
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </div>
+    {{/each}}
+    {{!eachni tugashi(yoki tasir doirasini chegarasi)  }}
+  </div>
+</div>
